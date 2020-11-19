@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <title>CS1300 Project 2</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./home.html">Portfolio</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item"><a class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-column blankets justify-content-center align-items-center">
+        <div style="background-color:black; text-align:center;">
+            <h1 class="text-light display-5">CS1300 Project 2: Responsive Redesign</h1>
+            <h3 class="text-light display-6 padding-top:2rem">Good Fortune Brings Me Bad Luck</h2>
+        </div>
+    </div>
+    <div id="overall" class="flex-column">
+        <div class="mx-2">
+            <div id="overview" class="container-fluid" style='margin-top:1rem'>
+                <h4>Overview</h4>
+                <p class="lead">Good Fortune Supermarket has been one of my favorite places to get groceries, perhaps
+                    even rivaling Trader Joe's in my heart. However, their website sadly isn't as great as their
+                    products.
+                    It is very confusing to navigate, and honestly could be a lot better. Hence, I decided to redesign
+                    it.
+                </p>
+            </div>
+            <div id="observations" class="container-fluid">
+                <h4 style='margin-top:1rem'>Part 1</h4>
+                <p class="lead">Here is what the website looked like when I decided to redesign it. Click <a
+                        href="http://www.goodfortunesupermarket.com/desktop.php?"> here </a>to visit it
+                    <img src="./resources/screenshot.png" class="img-fluid" alt="Responsive image">
+                <h4 style='margin-top:1rem'>Why I Decided to Redesign it</h4>
+                </p>
+                <p class="lead">I will break down my problems with the website in terms of learnability and
+                    memorability, and then go into if the website is thus usable.</p>
+                <li class="list-group-item">
+                    <h5>Learnability</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item"> If an user wanted to order online on this website on their first
+                            try, it would be quite hard to accomplish it. The links are hidden within the very large QR
+                            codes that don't have any description. This is something I think shouldn't be the case, and
+                            can easily be replaced with a simple clickable button.</li>
+                        <li class="list-group-item"> The method of changing language is hidden very badly at the top
+                            right. This can very easily be replaced by a button to make it more accessible.</li>
+                        <li class="list-group-item"> There is no button that can be clicked to submit your email to
+                            subscribe, so a new user wouldn't be able to tell if it worked.</li>
+                        <li class="list-group-item"> Under locations it has a warehouse, which may lead new users to
+                            believe it is a store. However, it is also present under offices so it isn't really a store.
+                            This may make a new user go to a random location expecting a store.</li>
+                        <li class="list-group-item"> As a new user, looking at the random QR code present below the
+                            locations for the store doesn't make any sense. So, you have to actually scan the code to
+                            figure out what it does.</li>
+
+                    </ul>
+                    <h5 style='margin-top:1rem'>Memorability</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item"> I definitely think that if an user were to come back to the website
+                            after a break, they wouldn't really recall that clicking a QR code image would be the way to
+                            order. The same goes for the changing language functionality.</li>
+                        <li class="list-group-item"> Remembering what the QR codes below the locations do would be
+                            difficult, especially if you aren't used to websites using it in such a manner. A label
+                            would fix this.</li>
+                    </ul>
+                    <h5 style='margin-top:1rem'>Usability</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Overall, I think the Learnability and Memorability of the website is
+                            very low. Thus, I don't think the website is really usable due to the flaws I outlined above
+                        </li>
+                    </ul>
+                </li>
+
+                <h4 style='margin-top:1rem'> WebAIM and ScreenReader</h4>
+                <li class="list-group-item">
+                    <h5>WebAIM</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item"> According to WebAIM, the website has 24 errors. Most of the errors
+                            seem to be from a lack of alternative texts, empty links, missing form labels. I believe
+                            this makes it unaccessible to a lot of users</li>
+                    </ul>
+
+                    <h5 style='margin-top:1rem'>ScreenReader</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item"> Navigating the website with a screenreader was very diffcult in my
+                            opinion.</li>
+                    </ul>
+                </li>
+
+            </div>
+            <div id="personas" class="container-fluid">
+                <h4 style='margin-top:1rem'>Prototypes and Style Guide</h4>
+                <p class='lead'>To start off my redesign project, I decided to first start by creating low and hi
+                    fidelity prototypes, as well as the style guide, prior to actually recreating the site.</p>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h5>Low Fidelity Prototype</h5>
+                            <ul class="list-group" style="text-align:center;">
+                                <p class="lead">Phone</p>
+                                <li class="list-group-item">
+                                    <img src="./resources/phone_low.png" class="img-fluid" alt="Responsive image">
+                                </li>
+                                <p class="lead" style="margin-top:1rem;">iPad/Tablet</p>
+                                <li class="list-group-item">
+                                    <img src="./resources/ipad_low.png" class="img-fluid" alt="Responsive image">
+                                </li>
+                                <p class="lead" style="margin-top:1rem;">Website</p>
+                                <li class="list-group-item">
+                                    <img src="./resources/browser_low.png" class="img-fluid" alt="Responsive image">
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>Hi-Fidelity Prototype</h5>
+
+                            <ul class="list-group" style="text-align:center;">
+                                <ul class="list-group">
+                                    <p class="lead">Phone</p>
+                                    <li class="list-group-item">
+                                        <img src="./resources/iphone_hi.png" class="img-fluid" alt="Responsive image">
+                                    </li>
+                                    <p class="lead" style="margin-top:1rem;">iPad/Tablet</p>
+                                    <li class="list-group-item">
+                                        <img src="./resources/ipad_hi.png" class="img-fluid" alt="Responsive image">
+                                    </li>
+                                    <p class="lead" style="margin-top:1rem;">Website</p>
+                                    <li class="list-group-item">
+                                        <img src="./resources/browser_hi.png" class="img-fluid" alt="Responsive image">
+                                    </li>
+
+                                </ul>
+                            </ul>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>Visual Style Guide</h5>
+                            <img src="./resources/visual_style_guide.png" class="img-fluid" alt="Responsive image" style="height:40rem;width:50rem;">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="website" class=container-fluid>
+                <h4 style='margin-top:1rem'>My Website</h4>
+                <p class='lead'>Here is my version of the website, with all the new things in place. Click <a href="https://mighty-dawn-18289.herokuapp.com">here</a> to visit!</p>
+            </div>
+            <div id="storyboard" class="container-fluid">
+                <h4 style='margin-top:1rem'>Conclusion</h4>
+                <p class='lead'>Honestly, I'm kind of happy with my rendition of the website. While it is obviously not perfect, I think it is still far better than the current website! </p>
+
+                </ul>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

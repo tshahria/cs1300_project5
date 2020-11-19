@@ -1,0 +1,5 @@
+.blankets {
+    background: url(./resources/development.png) center fixed;
+    height: calc(100vh - 120px);
+}
+

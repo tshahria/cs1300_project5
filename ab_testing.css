@@ -1,0 +1,4 @@
+.blankets {
+    background: url(./resources/ab_testing.jpg) center fixed;
+    height: calc(100vh - 120px);
+}

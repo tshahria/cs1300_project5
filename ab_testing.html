@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="ab_testing.css">
+    <link rel="stylesheet" href="main.css">
+    <title>CS1300 Project 3</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./home.html">Portfolio</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item"><a class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-column blankets justify-content-center align-items-center">
+        <div style="background-color:black; text-align:center;">
+            <h1 class="text-light display-5">CS1300 Project 3: A/B Testing</h1>
+            <h3 class="text-light display-6 padding-top:2rem">Testing I Approve Of</h2>
+        </div>
+    </div>
+    <div id="overall" class="flex-column">
+        <div class="mx-2">
+            <div id="overview" class="container-fluid" style='margin-top:1rem'>
+                <h4>Overview</h4>
+                <p class="lead"> A/B Testing is something used commonly in the real world to test small changes among a group of users. For this project, I decided to test my changes on a website with regards to Time To Completion and Return Rate. Here is the website I tested: <a href="https://ab-test-app-studio.herokuapp.com/">Website</a>
+                </p>
+            </div>
+            <div id="observations" class="container-fluid">
+                <h4 style='margin-top:1rem'>Null and Alternate Hypothesis</h4>
+                <p class="lead" style="text-align: center;">Here is version A of the website <img src="./resources/version_a.png" class="img-fluid" alt="Responsive image" style = "width:25rem; height:20rem;"> </p>
+                <p class="lead" style="text-align: center;">Here is version B of the website <img src="./resources/version_b.png" class="img-fluid" alt="Responsive image" style = "width:25rem; height:20rem;"> </p>
+
+                <h4 style='margin-top:1rem'>Metrics</h4>
+                </p>
+                <p class="lead">I plan to look at two metrics for the changes between my websites: Time to Completion, and Return Rate. Below I will outline the Null and Alternative Hypothesis for these metrics.</p>
+                <li class="list-group-item">
+                    <h5>Time to Completion</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Null Hypothesis: There will be no significant difference between the time to completion of both pages.</li>
+                        <li class="list-group-item">Alternative: The time to completion will be different due to the change in layout and button size between the two pages. The 2x2 layout with smaller buttons (Version A) should result in a lower time to completion than the large add to cart buttons as users have to scroll less to find their items.</li>
+                    </ul>
+                    <h5 style='margin-top:1rem'>Return Rate</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Null Hypothesis: There will be no significant difference between the time to return rate of both pages. </li>
+                        <li class="list-group-item">Alternative: The return rate will be different due to the addition of a total to one of the pages (to version B), which will mean the user will have less need to return to the main page</li>
+                    </ul>
+                </li>
+
+            </div>
+            <div id="data" class="container-fluid">
+                <h4 style='margin-top:1rem'>Data</h4>
+                <p class='lead'>This is the data I collected from my website, that I will use statistical analysis on in the next part. I collected this data by first sharing the link with fellow students. Afterwards, to get more data I shared it with friends and family. Heroku logs store the user data in terms of what page is loaded, what button is clicked etc, and using this data I was able to calculate my metrics.</p>
+                <li class="list-group-item">
+                    <h5>Time to Completion (in millisecond)</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Website A: [4567, 3573, 4761, 8530, 28164, 327125, 15984, 4532, 8407, 2467, 115650]</li>
+                        <li class="list-group-item">Website B: [4871, 6203, 26146, 7292, 67703, 199054, 7343, 5569]</li>
+
+                    </ul>
+                    <h5 style='margin-top:1rem'>Return Rate (return | no return)</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Website A: Return: 2, No Return: 9</li>
+                        <li class="list-group-item">Website B: Return: 3, No Return: 5</li>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="calculations" class="container-fluid">
+                <h4 style='margin-top:1rem'>Calculations and Conclusion</h4>
+                <p class='lead'>This is the calculation based on the data </p>
+                <li class="list-group-item">
+                    <h5>Time to Completion (T Test)</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">The P Value was 0.434 and the t score was -0.169. As P>0.05, we can’t reject the null, and the results are statistically insignificant, so we don’t know if the alternative hypothesis will repeat itself in other trials. </li>
+                        <li class="list-group-item">Conclusion: No significant difference.</li>
+
+                    </ul>
+                    <h5 style='margin-top:1rem'>Return Rate (Chi^2 Test)</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">The p value I got for the return rate was 0.636 after running a chi2 test, and the chi2 value was 0.224. As 0.636>0.05, this means we can’t reject the null. Hence, we can’t reject the null, and the yur results are statistically insignificant, so we don’t know if the alternative hypothesis will repeat itself in other trials./li>
+                        <li class="list-group-item">Conclusion: No significant difference.</li>
+
+                    </ul>
+                </li>
+            </div>
+            <div id="website" class="container-fluid">
+                <h4 style='margin-top:1rem'>Infographic</h4>
+                <p style="text-align:center;"> <img src="./resources/infographic.png" class="img-fluid" alt="Responsive image" style = "width:30rem; height:80rem;">
+                </p>
+            </div>
+            <div id="storyboard" class="container-fluid">
+                <h4 style='margin-top:1rem'>Takeaways</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Limitations: I think the biggest limitation for this A/B testing was the quantity and quality of user data. Since most of the users were other students, they were somewhat biased when interacting with the site. We also only had about 20 data points to interpret from, which is very little </li>
+                    <li class="list-group-item">I think in general, in terms of design principles, I think from my results I understood that things we think might incur massive changes have no effects. However, that isn't always the case. Sometimes even a small change (color, small change in affordance), can lead to massive changes.</li>
+
+                </ul>
+
+                </ul>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
