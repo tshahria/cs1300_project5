@@ -93,3 +93,40 @@
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
+
+  .img-size {
+      width:25rem;
+      height:22rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .hovereffect {
+        width: 20rem;
+        height: 20rem;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        cursor: default;
+      }
+      
+    .hovereffect .overlay {
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.6);
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: translate(460px, -100px) rotate(180deg);
+        -ms-transform: translate(460px, -100px) rotate(180deg);
+        transform: translate(460px, -100px) rotate(180deg);
+        -webkit-transition: all 0.2s 0.4s ease-in-out;
+        transition: all 0.2s 0.4s ease-in-out;
+      }
+      .img-size {
+          width:20rem;
+          height:20rem;
+      }
+  }
