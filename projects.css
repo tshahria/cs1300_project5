@@ -95,13 +95,13 @@
   }
 
   .img-size {
-      max-width:25rem;
-      max-height:22rem;
+      width:25rem;
+      height:22rem;
   }
-  /* @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     .hovereffect {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
         float: left;
         overflow: hidden;
         position: relative;
@@ -110,8 +110,8 @@
       }
       
     .hovereffect .overlay {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
         position: absolute;
         overflow: hidden;
         top: 0;
@@ -125,4 +125,8 @@
         -webkit-transition: all 0.2s 0.4s ease-in-out;
         transition: all 0.2s 0.4s ease-in-out;
       }
-  } */
+    .img-size {
+        width:15rem;
+        height: 15rem;
+    }
+  }
