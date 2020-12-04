@@ -125,8 +125,4 @@
         -webkit-transition: all 0.2s 0.4s ease-in-out;
         transition: all 0.2s 0.4s ease-in-out;
       }
-    .img-size {
-        width:15rem !important;
-        height: 15rem !important;
-    }
   }
